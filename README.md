@@ -12,13 +12,8 @@ Built using **[Astro 5](https://astro.build/)** and **[Tailwind CSS V4](https://
 - ✅ **Mobile-responsive** - Target different devices
 - ✅ **Zero JavaScript** (optional) - Fast by default
 - ✅ **Easy customization** - Tailwind + clean components
-<br>
-<br>
-<br>
-![3dinterior Theme Screenshot](./public/img/mac-3dinterior-preview.png)
 
-[![License](https://img.shields.io/github/license/nearmelab/3dinterior?style=flat-square)](./LICENSE)
-[![Stars](https://img.shields.io/github/stars/nearmelab/3dinterior?style=social)](https://github.com/nearmelab/3dinterior)
+![3dinterior Theme Screenshot](./public/img/mac-3dinterior-preview.png)
 
 ---
 
