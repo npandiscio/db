@@ -1,7 +1,31 @@
 {
-  "name": "goend",
+  "name": "3dinterior",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Free Astro theme built for architects and design studios.",
+  "author": {
+    "name": "Nearmelab",
+    "email": "dev@nearmelab.digital",
+    "url": "https://nearmelab.digital"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/nearmelab/3dinterior",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nearmelab/3dinterior.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nearmelab/3dinterior/issues"
+  },
+  "keywords": [
+    "astro",
+    "astro-theme",
+    "tailwindcss",
+    "3d",
+    "interior-design",
+    "portfolio",
+    "cloudflare"
+  ],
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -23,5 +47,12 @@
   "devDependencies": {
     "@vitejs/plugin-basic-ssl": "^2.1.4",
     "wrangler": "^4.71.0"
+  },
+  "peerDependencies": {
+    "astro": "^6.0.0-beta.20"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "pnpm": ">=8.0.0"
   }
 }
