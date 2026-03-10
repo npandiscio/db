@@ -7,7 +7,6 @@ import basicSsl from '@vitejs/plugin-basic-ssl';
 
 import cloudflare from '@astrojs/cloudflare';
 
-// https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [
@@ -18,6 +17,7 @@ export default defineConfig({
       }),
     ],
   },
-
-  adapter: cloudflare(),
+  adapter:  cloudflare({
+    imageService: 'compile',
+  }),
 });
