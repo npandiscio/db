@@ -41,18 +41,13 @@ const timelineEvents = [
           We don't just build walls; we curate light, texture, and movement. Our designs prioritize sustainability not as a feature, but as a foundational principle of modern longevity.
         </p>
         <div class="pt-4">
-          <Image
-            src={philosophyImage}
+         <Image
+        src={philosophyImage}
             alt="Detail of concrete and wood material interaction showing architectural textures"
-            class="rounded shadow-xl w-full"
-            loading="lazy"
-            decoding="async"
-            layout="constrained"
-            width={800}
-            height={600}
-            format="webp"
-            fit="cover"
-          />
+       widths={[240, 540, 720, philosophyImage.width]}
+  sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${philosophyImage.width}px`}
+  
+      />
         </div>
       </div>
 

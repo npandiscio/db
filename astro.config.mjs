@@ -7,16 +7,7 @@ import basicSsl from '@vitejs/plugin-basic-ssl';
 
 import cloudflare from '@astrojs/cloudflare';
 
-// https://astro.build/config
 export default defineConfig({
-  image: {
-   // Enable responsive images by default
-   responsiveStyles: true,
-   // Configure remote image sources for optimization
-   domains: ['lh3.googleusercontent.com', 'images.unsplash.com'],
-   // Sharp is the default service, no need to specify
- },
-
   vite: {
     plugins: [
       basicSsl(),
@@ -26,6 +17,7 @@ export default defineConfig({
       }),
     ],
   },
-
-  adapter: cloudflare(),
+  adapter:  cloudflare({
+    imageService: 'compile',
+  }),
 });
