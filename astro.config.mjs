@@ -12,9 +12,6 @@ export default defineConfig({
   image: {
    // Enable responsive images by default
    responsiveStyles: true,
-   // Configure remote image sources for optimization
-   domains: ['lh3.googleusercontent.com', 'images.unsplash.com'],
-   // Sharp is the default service, no need to specify
  },
 
   vite: {
