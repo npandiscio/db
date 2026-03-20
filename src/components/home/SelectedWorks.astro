@@ -6,6 +6,7 @@ import project1Image from '../../assets/img/home-page-img-03.jpg';
 import project2Image from '../../assets/img/home-page-img-04.jpg';
 import project3Image from '../../assets/img/home-page-img-05.jpg';
 import project4Image from '../../assets/img/home-page-img-06.jpg';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
 const projects = [
   {
@@ -46,7 +47,7 @@ const projects = [
         <span class="text-primary font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Portfolio</span>
         <h2 class="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none">Selected Works</h2>
       </div>
-      <a href={`${import.meta.env.BASE_URL}projects`} class="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest border-b-2 border-primary pb-1">
+      <a href={`${base}projects`} class="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest border-b-2 border-primary pb-1">
         All Projects
         <Icon name="arrow-right" size={16} class="group-hover:translate-x-1 transition-transform" />
       </a>

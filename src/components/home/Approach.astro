@@ -4,6 +4,7 @@ import Button from '../shared/Button.astro';
 import Icon from '../shared/Icon.astro';
 import { Image } from 'astro:assets';
 import approachImage from '../../assets/img/home-page-img-02.jpg';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <section class="bg-slate-100 dark:bg-background-dark/50 py-24 md:py-40">
@@ -65,8 +66,8 @@ import approachImage from '../../assets/img/home-page-img-02.jpg';
               </p>
             </div>
           </div>
-
-<Button href={`${import.meta.env.BASE_URL}about`} variant="outline" size="lg">Discover Our Story</Button>        </div>
+          <Button href={`${base}about`} variant="outline" size="lg">Discover Our Story</Button>
+        </div>
       </div>
     </div>
   </Container>

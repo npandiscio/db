@@ -3,6 +3,7 @@ import Button from '../shared/Button.astro';
 import Icon from '../shared/Icon.astro';
 import { Image } from 'astro:assets';
 import heroImage from '../../assets/img/home-page-img-01.jpg';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <section class="relative h-screen w-full flex items-center justify-center overflow-hidden pt-20">
@@ -31,8 +32,8 @@ import heroImage from '../../assets/img/home-page-img-01.jpg';
       Defining modern spaces through precision and soul
     </p>
     <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-      <Button href={`${import.meta.env.BASE_URL}projects`} variant="primary" size="lg">View Portfolio</Button>
-      <Button href={`${import.meta.env.BASE_URL}about`} variant="secondary" size="lg">Our Story</Button>
+      <Button href={`${base}projects`} variant="primary" size="lg">View Portfolio</Button>
+      <Button href={`${base}about`} variant="secondary" size="lg">Our Story</Button>
     </div>
   </div>
 
