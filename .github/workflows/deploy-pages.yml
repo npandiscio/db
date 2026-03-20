@@ -33,11 +33,6 @@ jobs:
           node-version: 22
           cache: pnpm
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: astro
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
