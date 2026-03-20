@@ -6,7 +6,7 @@ const currentPath = Astro.url.pathname;
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
-<header class="fixed top-0 w-full z-50 bg-white/94 dark:bg-background-dark/94 backdrop-blur-md border-b border-[#cbd6e2] dark:border-white/10 shadow-sm">
+<header class="fixed top-0 w-full z-50 bg-white/94 dark:bg-background-dark/94 backdrop-blur-md border-b border-[#d9d9d9] dark:border-white/10 shadow-sm">
   <Container class="h-20 flex items-center justify-between">
     <!-- Logo -->
     <a href={base} class="flex items-center gap-3 group cursor-pointer">
@@ -59,7 +59,7 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
     <div class="flex items-center gap-4">
       <a 
         href={`${base}contact`} 
-        class="bg-accent hover:bg-accent-dark text-background-dark px-6 py-2.5 rounded text-sm font-bold uppercase tracking-[0.18em] transition-all flex items-center gap-2 shadow-sm"
+        class="bg-primary hover:bg-[#0095cd] text-white px-6 py-2.5 rounded text-sm font-bold uppercase tracking-[0.18em] transition-all flex items-center gap-2 shadow-sm"
       >
         <Icon name="send" size={16} />
         <span>Inquire</span>
