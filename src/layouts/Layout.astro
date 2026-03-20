@@ -1,4 +1,4 @@
-a---
+---
 import '../styles/global.css';
 
 export interface Props {
@@ -7,6 +7,8 @@ export interface Props {
 }
 
 const { title, description = "Architectural studio specializing in minimalist design" } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const withBase = (path: string) => `${base}${path.replace(/^\/+/, '')}`;
 ---
 
 <!DOCTYPE html>
@@ -16,16 +18,24 @@ const { title, description = "Architectural studio specializing in minimalist de
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
     
     <!-- Font preloads -->
-    <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/inter-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/inter-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href={withBase('/fonts/inter-latin-400-normal.woff2')} as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href={withBase('/fonts/inter-latin-500-normal.woff2')} as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href={withBase('/fonts/inter-latin-600-normal.woff2')} as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href={withBase('/fonts/inter-latin-700-normal.woff2')} as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href={withBase('/fonts/inter-latin-900-normal.woff2')} as="font" type="font/woff2" crossorigin="anonymous">
     
     <!-- Inline critical CSS (minimal) -->
-    <style>
+    <style define:vars={{
+      inter400: withBase('/fonts/inter-latin-400-normal.woff2'),
+      inter500: withBase('/fonts/inter-latin-500-normal.woff2'),
+      inter600: withBase('/fonts/inter-latin-600-normal.woff2'),
+      inter700: withBase('/fonts/inter-latin-700-normal.woff2'),
+      inter900: withBase('/fonts/inter-latin-900-normal.woff2'),
+    }}>
       /* System font fallback */
       body {
         font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -37,35 +47,35 @@ const { title, description = "Architectural studio specializing in minimalist de
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url('/fonts/inter-latin-400-normal.woff2') format('woff2');
+        src: url(var(--inter400)) format('woff2');
       }
       @font-face {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
         font-display: swap;
-        src: url('/fonts/inter-latin-500-normal.woff2') format('woff2');
+        src: url(var(--inter500)) format('woff2');
       }
       @font-face {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 600;
         font-display: swap;
-        src: url('/fonts/inter-latin-600-normal.woff2') format('woff2');
+        src: url(var(--inter600)) format('woff2');
       }
       @font-face {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
         font-display: swap;
-        src: url('/fonts/inter-latin-700-normal.woff2') format('woff2');
+        src: url(var(--inter700)) format('woff2');
       }
       @font-face {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 900;
         font-display: swap;
-        src: url('/fonts/inter-latin-900-normal.woff2') format('woff2');
+        src: url(var(--inter900)) format('woff2');
       }
     </style>
   </head>

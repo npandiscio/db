@@ -5,9 +5,10 @@ import tailwindcss from '@tailwindcss/vite';
 import Icons from 'unplugin-icons/vite'
 import basicSsl from '@vitejs/plugin-basic-ssl';
 
-import cloudflare from '@astrojs/cloudflare';
-
 export default defineConfig({
+  output: 'static',
+  site: 'https://npandiscio.github.io',
+  base: '/db',
   vite: {
     plugins: [
       basicSsl(),
@@ -17,7 +18,4 @@ export default defineConfig({
       }),
     ],
   },
-  adapter:  cloudflare({
-    imageService: 'compile',
-  }),
 });
