@@ -3,15 +3,15 @@
 /* Custom theme configuration */
 @theme {
   /* Colors */
-  --color-primary: #005949;
-  --color-accent: #fad20a;
-  --color-accent-dark: #c8a808;
-  --color-background-light: #f3f3f3;
-  --color-background-dark: #333333;
+  --color-primary: #0074bc;
+  --color-accent: #a2c02f;
+  --color-accent-dark: #89a527;
+  --color-background-light: #f7f9fd;
+  --color-background-dark: #071b3d;
   --color-surface: #ffffff;
-  --color-surface-muted: #ece8e2;
-  --color-brand-ink: #333333;
-  --color-brand-sage: #4d8b7f;
+  --color-surface-muted: #edf0f2;
+  --color-brand-ink: #33475b;
+  --color-brand-sage: #7c98b6;
   
   /* Border radius */
   --radius-default: 0.125rem;
@@ -36,8 +36,8 @@
   body {
     @apply bg-background-light text-brand-ink dark:bg-background-dark dark:text-slate-100 transition-colors duration-300 antialiased;
     background-image:
-      radial-gradient(circle at top left, color-mix(in srgb, var(--color-accent) 18%, transparent), transparent 28%),
-      linear-gradient(180deg, color-mix(in srgb, var(--color-surface-muted) 85%, white), var(--color-background-light));
+      radial-gradient(circle at top left, color-mix(in srgb, var(--color-primary) 12%, transparent), transparent 28%),
+      linear-gradient(180deg, color-mix(in srgb, var(--color-surface-muted) 78%, white), var(--color-background-light));
   }
 }
 

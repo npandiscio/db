@@ -5,12 +5,12 @@ import Icon from '../shared/Icon.astro';
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
-<footer class="border-t border-primary/15 bg-primary text-white py-12">
+<footer class="border-t border-primary/15 bg-background-dark text-white py-12">
   <Container size="xl">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
       <div class="col-span-1 md:col-span-2">
         <div class="flex items-center gap-3 text-white mb-6">
-          <Logo size="sm" class="text-accent" />
+          <Logo size="sm" class="text-primary" />
           <span class="font-bold uppercase tracking-tight">Studio Alpha</span>
         </div>
         <p class="text-white/78 text-sm max-w-sm font-light leading-relaxed">
